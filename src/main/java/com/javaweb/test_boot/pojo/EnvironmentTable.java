@@ -15,4 +15,5 @@ public class EnvironmentTable {    // 环境表，与对应的表建立映射实
     private String temperature;     //温度
     private String humidity;       // 湿度
     private String light;          // 光照
+    
 }

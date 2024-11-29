@@ -12,6 +12,8 @@ public interface EnvironmentTableMapper {  // 接口
 
     @Select("SELECT * FROM 环境检测 WHERE id = #{id}")
     EnvironmentTable selectById(int id);      // 根据id查询
+    
 
 }
+
 

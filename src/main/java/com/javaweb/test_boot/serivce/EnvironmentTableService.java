@@ -19,6 +19,7 @@ public class EnvironmentTableService {
 
     public EnvironmentTable selectById(int id) {
         return environmentTableMapper.selectById(id);
+        
     }
 
 }

@@ -24,6 +24,7 @@ public class TestController {
     @GetMapping("/")
     public String hello(Model model) {
         System.out.println("微信小程序握手成功");
+        
         return "hello"; // 返回hello.html
     }
 
