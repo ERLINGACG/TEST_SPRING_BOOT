@@ -21,10 +21,12 @@ public class EnvironmentTableController {
         return Result.success(environmentTableService.getAll());
     }
 
-    @RequestMapping("/FindEnvironmentTable/{id}")
+//    @RequestMapping("/FindEnvironmentTable/{id}")
+    @GetMapping("/FindEnvironmentTable/{id}")
     public Result FindEnvironmentTable(@PathVariable("id") int id) {
         return Result.success(environmentTableService.selectById(id));
     }
+
 
 
 

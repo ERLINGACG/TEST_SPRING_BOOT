@@ -1,9 +1,6 @@
 package com.javaweb.test_boot.contorller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 
@@ -26,6 +23,13 @@ public class TestController {
         System.out.println("微信小程序握手成功");
         
         return "hello"; // 返回hello.html
+    }
+
+    @PostMapping("/Post_test/{string}")
+    public String submitName2(@PathVariable("string") String magess) {
+        // 在这里处理接收到的name
+        System.out.println("接收到的名字: " + magess);
+        return "redirect:/"; // 提交后重定向回欢迎页面
     }
 
 }

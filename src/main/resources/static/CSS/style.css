@@ -1,0 +1,59 @@
+html, body {
+    /* 设置html和body的宽度和高度为100%以填充整个页面 */
+    width: 100%;
+    height: 100%;
+    
+}
+.box { 
+    /* 定义.box的宽度和高度为100%以覆盖父容器 */
+    width: 100%;
+    height: 100%;
+}
+.login {
+    /* 定义登录框的样式 */
+    width: 600px;
+    height: auto;
+    border : 1px solid #f1f1f1;
+    box-shadow: 2px 2px 8px #000;
+}
+.header {
+    /* 定义头部的样式及背景渐变 */
+    width: 100%;
+    height: 160px;
+    background-image: linear-gradient(30deg, #f79533, #f37055, #5073b8);
+}
+
+.center {
+    /* 定义中心内容区域的宽度和高度 */
+    width: 400px;
+    height: 200px;
+}
+
+.footer .left,
+.footer .right {
+    /* 定义footer区域的子元素样式 */
+    position: relative;     /* 添加相对定位以便于绝对定位的伪元素 */
+    display: inline-block; /* 确保元素是块级，以便下划线效果正常 */
+}
+
+.footer .left::after,
+.footer .right::after {
+    /* 定义伪元素以实现下划线效果 */
+    content: '';         /* 强制伪元素生成 */
+    position: absolute; /* 绝对定位 */
+    left: 0;
+    bottom: 0;     /* 放在文本底部 */
+    height: 2px;  /* 下划线的高度 */
+    width: 100%; /* 下划线宽度为100% */
+    background-image: linear-gradient(to right, #f79533, #f37055); /* 渐变颜色 */
+    transform: scaleX(0);             /* 初始缩放为0（隐藏） */
+    transition: transform 0.3s ease; /* 过渡效果 */
+    z-index: -1;                    /* 确保下划线在文本下方 */
+}
+
+.footer .left:hover::after,
+.footer .right:hover::after {
+    /* 悬停时展现下划线 */
+    transform: scaleX(1); /* 悬停时显示下划线 */
+    /* cursor: pointer; 可选，改变鼠标样式为手指光标 */
+}
